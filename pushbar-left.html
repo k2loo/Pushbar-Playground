@@ -8,45 +8,80 @@
   <title>left pushbar</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
   <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
-  <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+  <link rel="stylesheet" href="milligram.css">
 
   <link rel="stylesheet" type="text/css" href="pushbar/pushbar.css">
-  <link rel="stylesheet" type="text/css" href="demo.css">
+  <!-- <link rel="stylesheet" type="text/css" href="demo.css"> -->
 </head>
 
 <body>
-  <div><button data-pushbar-target="left">Left pushbar</button></div>
+  <!-- left pushbar content -->
+  <button data-pushbar-target="left pushbar">
+    left pushbar
+  </button>
+  <div data-pushbar-id="left pushbar" class="pushbar from_left">
+    <button data-pushbar-close style="float: right;">Close</button>
+    <ul>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+    </ul>
+  </div>
 
-  <div data-pushbar-id="mypushbar1" class="pushbar from_left">
-    Push bar content 1
-
+  <!-- right pushbar content -->
+  <button data-pushbar-target="bottom pushbar">
+    bottom pushbar
+  </button>
+  <div data-pushbar-id="bottom pushbar" class="pushbar from_bottom">
     <button data-pushbar-close>Close</button>
+    <ul>
+      <li><a href="#" item 1>item 1</a></li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+    </ul>
   </div>
 
-  <div data-pushbar-id="mypushbar2" class="pushbar from_bottom">
-    Push bar content 2
+  <!-- page content here -->
+  <div class="content">
+    <textarea disabled style="min-height: 350px;">
+      <button data-pushbar-target="NameOfPushbar">
+        text or icon here
+      </button>
 
-    <button data-pushbar-close>Close</button>
+      <div data-pushbar-id="NameOfPushbar" class="pushbar from_bottom">
+        <ul>
+          <li>item 1</li>
+          <li>item 2</li>
+          <li>item 3</li>
+          <li>item 4</li>
+        </ul>
+
+        <button data-pushbar-close>Close</button>
+      </div>
+    </textarea>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum tempore rem, sint labore aliquid dolorum? Magni, pariatur.
+      Assumenda accusamus dolor ipsum, totam asperiores, quisquam officiis corporis porro voluptatem cum nisi illum. Dolorum,
+      fugit repellat sequi ab veniam tempora incidunt voluptatem doloremque odio expedita corrupti soluta quos. Nostrum saepe
+      corporis impedit ab ipsam excepturi reprehenderit dolore molestias, commodi cum assumenda expedita facere tempore mollitia
+      quo delectus aperiam rem sit minima consequuntur enim incidunt id porro voluptatum. Ab magni, eligendi quam eaque explicabo
+      blanditiis reiciendis sint optio iusto incidunt, odio ea ratione, quisquam quo similique modi! Sequi nostrum non sapiente
+      temporibus. Possimus maiores repudiandae et rem, accusamus adipisci deserunt ex, iste nihil aliquid eveniet, in debitis
+      corporis recusandae odio! Recusandae accusamus labore repellendus consequatur consequuntur maiores iusto, quam placeat
+      nihil ut earum dolorem ea beatae quae omnis officia soluta neque ipsum, quaerat, in corrupti fugit? Explicabo, voluptatibus
+      at! Nisi minima dolorum quos, sint veniam, impedit nihil laborum illum eaque rem at exercitationem illo consequuntur
+      pariatur velit adipisci ab asperiores assumenda eveniet dolorem, nesciunt dicta iure. Earum adipisci amet libero dolor
+      perferendis neque reprehenderit minima omnis animi? Optio labore harum esse? Modi architecto minus aliquam velit atque
+      dignissimos sit enim, est voluptate recusandae.
+    </p>
   </div>
 
-  <div class="pushbar_main_content">
-    Main content of the page
-
-    <button data-pushbar-target="mypushbar1">
-      Open my pushbar 1
-    </button>
-
-    <button data-pushbar-target="mypushbar2">
-      Open my pushbar 2
-    </button>
-  </div>
-
-
-
+  <!-- place this at the end of the body -->
   <script type="text/javascript" src="pushbar/pushbar.js"></script>
   <script type="text/javascript">
     var pushbar = new Pushbar({
-      blur: true,
+      blur: false,
       overlay: true,
     });
   </script>
