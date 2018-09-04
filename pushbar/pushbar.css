@@ -93,4 +93,5 @@ html.pushbar_locked .pushbar_overlay{
 
 .pushbar.opened{
    transform: translateX(0px) translateY(0px);
+   background-color:rgba(63, 21, 79,1);
 }
